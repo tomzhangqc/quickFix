@@ -1,7 +1,4 @@
-npm init vite-app 项目名称
+npm create @vitejs/app
 
-cd 项目名称
-
-npm install
-
-npm run dev
+npm install element-plus --save
+npm install axios@0.21 --save
