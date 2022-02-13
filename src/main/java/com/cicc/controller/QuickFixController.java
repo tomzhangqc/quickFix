@@ -24,12 +24,14 @@ public class QuickFixController {
 
     @RequestMapping("/get")
     public Response getReceiveMessage(){
-        QuickFixOrder quickFixOrder=new QuickFixOrder();
-        quickFixOrder.setName("杯子");
-        quickFixOrder.setAddress("北京市朝阳区");
-        quickFixOrder.setDate("20220212000000");
         List<QuickFixOrder> quickFixOrderList=new ArrayList<>();
-        quickFixOrderList.add(quickFixOrder);
+        for(int i=0;i<100;i++){
+            QuickFixOrder quickFixOrder=new QuickFixOrder();
+            quickFixOrder.setName("杯子");
+            quickFixOrder.setAddress("北京市朝阳区");
+            quickFixOrder.setDate("20220212000000");
+            quickFixOrderList.add(quickFixOrder);
+        }
         Response response=new Response();
         response.setCode(0);
         response.setMessage("success");
