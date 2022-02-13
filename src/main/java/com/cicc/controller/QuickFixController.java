@@ -2,6 +2,8 @@ package com.cicc.controller;
 
 import com.cicc.entity.QuickFixOrder;
 import com.cicc.entity.Response;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +14,11 @@ import java.util.List;
 @RestController
 public class QuickFixController {
 
+    Logger log = LoggerFactory.getLogger(getClass());
+
     @RequestMapping("/send")
     public int sendMessage(@RequestBody QuickFixOrder quickFixOrder){
+        log.info(quickFixOrder.toString());
         return 0;
     }
 

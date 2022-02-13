@@ -7,3 +7,9 @@ spring:
 #    mode: HTML #模板
 server:
   port: 8080
+
+logging:
+  config: classpath:logback.xml
+  level:
+    com:
+      springboot: debug
